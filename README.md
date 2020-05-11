@@ -29,9 +29,9 @@ El primer paso es decidir qué información vamos a tomar del estado de la celda
 
 El siguiente paso es decidir qué nueva información vamos a almacenar en el estado de la celda. Esto tiene dos partes. 
 
-+ 1. Una capa *sigmoide* llamada "capa de puerta de entrada" decide qué valores actualizaremos. 
-+ 2. Una capa *tanh* crea un vector de nuevos valores candidatos, <img src="https://latex.codecogs.com/gif.latex?\hat{C}_t" />, que podrían agregarse al estado. 
-+ 3. Se combinan los dos para crear una actualización del estado.
+1. Una capa *sigmoide* llamada "capa de puerta de entrada" decide qué valores actualizaremos. 
+2. Una capa *tanh* crea un vector de nuevos valores candidatos, $`\tilde{C}_t`$, que podrían agregarse al estado. 
+3. Se combinan los dos para crear una actualización del estado.
 
 ![](images/SecStep.png)
 
