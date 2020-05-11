@@ -155,19 +155,6 @@ my_df.head()
 my_df.tail()
 ```
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -281,9 +268,6 @@ df = my_df.copy()
 df.count()
 ```
 
-
-
-
     Date            6126
     infl            6126
     smlv            6126
@@ -315,21 +299,6 @@ df = df.astype(float)
 df.head()
 ```
 
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -971,5 +940,5 @@ print("MAE : ", mean_absolute_error(predictions['predicted'].values, predictions
 
 # Resumen del modelo
 | Parámetros| RMSE   |MAE  |Modelo|
-|:---------:|:------_|:---:|:----:|
+|-----------|--------|-----|------|
 |   137,701 | 1.98   |1.59 |.hdf5 |
