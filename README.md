@@ -1,5 +1,10 @@
 # TRM-USD-Inteligencia-Computacional
 
+### Author:
+Johny Vallejo-Sánchez
+*javallejos@eafit.edu.co*
+Universidad EAFIT
+
 ## RNN y redes LSTM
 
 Todas las RNNs tienen la forma de una cadena de módulos repetitivos de red neuronal. En las RNN estándar, este módulo repetitivo tendrá una estructura simple, como una sola capa de *tanh*.
