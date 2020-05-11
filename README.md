@@ -49,5 +49,7 @@ Finalmente, se decide qué vamos a generar. Esta salida se basará en nuestro es
 ![](images/finalStep.png)
 
 
+[**Información tomada de**](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+
 
 
