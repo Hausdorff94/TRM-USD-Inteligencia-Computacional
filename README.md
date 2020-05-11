@@ -2,4 +2,4 @@
 
 ## Red LSTM
 
-![](LSTM.png)
+![](LSTM.jpg)
