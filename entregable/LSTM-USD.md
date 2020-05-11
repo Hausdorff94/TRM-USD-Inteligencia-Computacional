@@ -41,9 +41,6 @@ from keras.layers import Dense, Dropout, Activation, Input, LSTM, Dense
 from keras.callbacks import ModelCheckpoint
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 ```
-
-    /opt/conda/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
-      from ._conv import register_converters as _register_converters
     Using TensorFlow backend.
     
 
@@ -59,22 +56,6 @@ my_df.head()
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
