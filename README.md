@@ -2,7 +2,9 @@
 
 ### Author:
 Johny Vallejo-Sánchez
+
 *javallejos@eafit.edu.co*
+
 Universidad EAFIT
 
 ## RNN y redes LSTM
