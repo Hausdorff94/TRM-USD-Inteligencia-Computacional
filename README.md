@@ -25,3 +25,16 @@ La salida de la capa *sigmoide* son números entre 0 y 1, que describe cuánto d
 
 El primer paso es decidir qué información vamos a tomar del estado de la celda. Esta decisión la determina una capa sigmoidea llamada "capa de puerta olvidada". Examina <img src="https://latex.codecogs.com/gif.latex?h_t-1" /> y <img src="https://latex.codecogs.com/gif.latex?x_t" />, y genera un número entre 0 y 1 para cada número en el estado de celda <img src="https://latex.codecogs.com/gif.latex?C_t-1" />.
 
+![](images/FirstStep.png)
+
+El siguiente paso es decidir qué nueva información vamos a almacenar en el estado de la celda. Esto tiene dos partes. 
+
++ 1. Una capa *sigmoide* llamada "capa de puerta de entrada" decide qué valores actualizaremos. 
++ 2. Una capa *tanh* crea un vector de nuevos valores candidatos, <img src="https://latex.codecogs.com/gif.latex?\hat{C}_t" />, que podrían agregarse al estado. 
++ 3. Se combinan los dos para crear una actualización del estado.
+
+![](images/SecStep.png)
+
+
+
+
