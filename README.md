@@ -30,10 +30,23 @@ El primer paso es decidir qué información vamos a tomar del estado de la celda
 El siguiente paso es decidir qué nueva información vamos a almacenar en el estado de la celda. Esto tiene dos partes. 
 
 1. Una capa *sigmoide* llamada "capa de puerta de entrada" decide qué valores actualizaremos. 
-2. Una capa *tanh* crea un vector de nuevos valores candidatos, <img src="https://render.githubusercontent.com/render/math?math=\hat{C}_t">, que podrían agregarse al estado. 
+2. Una capa *tanh* crea un vector de nuevos valores candidatos, <img src="https://render.githubusercontent.com/render/math?math=\tilde{C}_t">, que podrían agregarse al estado. 
 3. Se combinan los dos para crear una actualización del estado.
 
 ![](images/SecStep.png)
+
+Ahora se actualiza el antiguo estado de la celda, <img src="https://render.githubusercontent.com/render/math?math=C_t-1">, en el nuevo estado de la celda <img src="https://render.githubusercontent.com/render/math?math=C_t">.
+
+Multiplicamos el viejo estado por <img src="https://render.githubusercontent.com/render/math?math=f_t">, olvidando las valores que decidimos olvidar antes. Luego lo agregamos <img src="https://render.githubusercontent.com/render/math?math=i*\tilde{C}_t">. Estos son los nuevos valores candidatos, escalados según cuánto decidimos actualizar cada valor de estado.
+
+![](images/ThStep.png)
+
+Finalmente, se decide qué vamos a generar. Esta salida se basará en nuestro estado de celda, pero será una versión filtrada. 
+
+1. Se ejecuta una capa *sigmoide* que decide qué partes del estado de la celda se va a generar. 
+2. Se pone el estado de la celda en *tanh* (para que los valores estén entre -1 y 1) y lo multiplicamos por la salida de la puerta *sigmoide*, de modo que solo produzcamos las partes que decidimos.
+
+![](images/finalStep.png)
 
 
 
