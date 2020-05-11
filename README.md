@@ -23,7 +23,7 @@ El LSTM pueden eliminar o agregar información al estado de la célula, cuidados
 
 La salida de la capa *sigmoide* son números entre 0 y 1, que describe cuánto de cada componente que debe dejarse pasar. 0 significa "no dejar pasar nada", y 1 significa "dejar pasar todo". Un LSTM tiene tres de estas puertas, para proteger y controlar el estado de la celda.
 
-El primer paso es decidir qué información vamos a tomar del estado de la celda. Esta decisión la determina una capa sigmoidea llamada "capa de puerta olvidada". Examina <img src="https://latex.codecogs.com/gif.latex?h_t-1" /> y <img src="https://latex.codecogs.com/gif.latex?x_t" />, y genera un número entre 0 y 1 para cada número en el estado de celda <img src="https://latex.codecogs.com/gif.latex?C_t-1" />.
+El primer paso es decidir qué información vamos a tomar del estado de la celda. Esta decisión la determina una capa sigmoidea llamada "capa de puerta olvidada". Examina <img src="https://latex.codecogs.com/gif.latex?h_t-1" /> y <img src="https://latex.codecogs.com/gif.latex?x_t" />, y genera un número entre 0 y 1 para cada número en el estado de celda <img src="https://render.githubusercontent.com/render/math?math=C_t-1">.
 
 ![](images/FirstStep.png)
 
