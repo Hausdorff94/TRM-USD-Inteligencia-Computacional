@@ -23,14 +23,14 @@ El LSTM pueden eliminar o agregar información al estado de la célula, cuidados
 
 La salida de la capa *sigmoide* son números entre 0 y 1, que describe cuánto de cada componente que debe dejarse pasar. 0 significa "no dejar pasar nada", y 1 significa "dejar pasar todo". Un LSTM tiene tres de estas puertas, para proteger y controlar el estado de la celda.
 
-El primer paso es decidir qué información vamos a tomar del estado de la celda. Esta decisión la determina una capa sigmoidea llamada "capa de puerta olvidada". Examina <img src="https://latex.codecogs.com/gif.latex?h_t-1" /> y <img src="https://latex.codecogs.com/gif.latex?x_t" />, y genera un número entre 0 y 1 para cada número en el estado de celda <img src="https://render.githubusercontent.com/render/math?math=C_t-1">.
+El primer paso es decidir qué información vamos a tomar del estado de la celda. Esta decisión la determina una capa sigmoidea llamada "capa de puerta olvidada". Examina <img src="https://render.githubusercontent.com/render/math?math=h_t-1"> y <img src="https://render.githubusercontent.com/render/math?math=x_t">, y genera un número entre 0 y 1 para cada número en el estado de celda <img src="https://render.githubusercontent.com/render/math?math=C_t-1">.
 
 ![](images/FirstStep.png)
 
 El siguiente paso es decidir qué nueva información vamos a almacenar en el estado de la celda. Esto tiene dos partes. 
 
 1. Una capa *sigmoide* llamada "capa de puerta de entrada" decide qué valores actualizaremos. 
-2. Una capa *tanh* crea un vector de nuevos valores candidatos, $`\sqrt{C}`$, que podrían agregarse al estado. 
+2. Una capa *tanh* crea un vector de nuevos valores candidatos, <img src="https://render.githubusercontent.com/render/math?math=\hat{C}_t">, que podrían agregarse al estado. 
 3. Se combinan los dos para crear una actualización del estado.
 
 ![](images/SecStep.png)
